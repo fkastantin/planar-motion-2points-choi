@@ -440,7 +440,6 @@ namespace sfm_general_stereo
             tringulated_inliers_points.assign(tringulated_points1.begin(), tringulated_points1.end());
             R1.copyTo(R);
             t.copyTo(_t);
-            _t *= -1.0;
         }
         else if (cnt2 >= cnt1 && cnt2 >= cnt3 && cnt2 >= cnt4)
         {
@@ -448,7 +447,6 @@ namespace sfm_general_stereo
             tringulated_inliers_points.assign(tringulated_points2.begin(), tringulated_points2.end());
             R2.copyTo(R);
             t.copyTo(_t);
-            _t *= -1.0;
         }
         else if (cnt3 >= cnt1 && cnt3 >= cnt2 && cnt3 >= cnt4)
         {
@@ -456,6 +454,7 @@ namespace sfm_general_stereo
             tringulated_inliers_points.assign(tringulated_points3.begin(), tringulated_points3.end());
             R1.copyTo(R);
             t.copyTo(_t);
+            _t *= -1.0;
         }
         else
         {
@@ -463,6 +462,7 @@ namespace sfm_general_stereo
             tringulated_inliers_points.assign(tringulated_points4.begin(), tringulated_points4.end());
             R2.copyTo(R);
             t.copyTo(_t);
+            _t *= -1.0;
         }
 
         P0.copyTo(projection_matrix1);

@@ -295,6 +295,8 @@ namespace sfm_planar_motion_ellipse
             {
                 Rs[i].copyTo(R);
                 ts[i].copyTo(t);
+
+                best_cnt = cnt;
             }
         }
     }
